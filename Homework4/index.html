@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="Connectu.css"> <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for search icon -->
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo"><img src="connu.png" alt="Logo"></h2>
+        </div>
+
+        <div class="menu-search">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Activities</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Leaders</a>
+                        <div class="dropdown-content">
+                            <a href="#">Club</a>
+                            <a href="#">College</a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">About Us</a>
+                        <div class="dropdown-content">
+                            <a href="#">Contact</a>
+                            <a href="#" onclick="showImprint()">Imprint</a> <!-- Imprint link triggers the showImprint function -->
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Clubs</a>
+                        <div class="dropdown-content">
+                            <a href="#">Sports Clubs</a>
+                            <a href="#">Cultural Clubs</a>
+                            <a href="#">Academic Clubs</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="search-bar" type="search" placeholder="Search..." id="search-bar">
+                <button class="btn" id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slogan section -->
+    <div class='slogan'>
+        <img src="connu.png" alt="Slogan Image">
+        <h1>Join the fun,<br> build lasting connections</h1>
+    </div>
+
+    <div class="slogan-words"> 
+        <p>ConnectU is your gateway to campus life at Constructor University.<br> 
+           Discover activities, events, and opportunities to connect with students from over 122 nationalities.<br> 
+           Whether it's a college-specific gathering or a campus-wide event,<br>
+           ConnectU helps you stay in the loop and build meaningful connections.<br> 
+           Join, connect, engage, and be a part of our vibrant community where campus life comes together.</p>
+    </div>
+
+    <!-- Hidden Imprint content section -->
+    <div id="imprint-content" class="imprint-content" style="display: none;">
+        <p>This website is student lab work and does not necessarily reflect Constructor University opinions. Constructor University does not endorse this site, nor is it checked by Constructor University regularly, nor is it part of the official Constructor University web presence.</p>
+        <p>For each external link existing on this website, we initially have checked that the target page does not contain contents which is illegal wrt. German jurisdiction. However, as we have no influence on such contents, this may change without our notice. Therefore we deny any responsibility for the websites referenced through our external links from here.</p>
+        <p>No information conflicting with GDPR is stored in the server.</p>
+    </div>
+
+    <!-- JavaScript for toggling menu and search bar -->
+    <script>
+        const searchBtn = document.getElementById('search-btn');
+        const searchBar = document.getElementById('search-bar');
+        const menu = document.querySelector('.menu');
+
+        searchBar.style.display = 'none';
+
+        searchBtn.addEventListener('click', function() {
+            if (searchBar.style.display === 'none') {
+                searchBar.style.display = 'block';
+                menu.style.display = 'none';
+            } else {
+                searchBar.style.display = 'none';
+                menu.style.display = 'flex';
+            }
+        });
+
+        // Function to display the Imprint section
+        function showImprint() {
+            const imprintContent = document.getElementById('imprint-content');
+            imprintContent.style.display = imprintContent.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
