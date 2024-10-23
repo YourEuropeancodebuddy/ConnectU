@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Activity</title>
+    <link rel="stylesheet" href="ConnectU.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo"><img src="ConnectU_Logo.png" alt="Logo"></h2>
+        </div>
+
+        <div class="menu-search">
+            <div class="menu">
+                <ul>
+                    <li><a href="ConnectU.html">Home</a></li>
+                    <li><a href="maintenance.html">Maintenance</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slogan">
+        <h1>Add a New Intellectual Club</h1>
+    </div>
+
+    <div class="slogan-words">
+        <form action="Intellectual_club.html" method="post">
+            <label for = "intellectual_club_name">Intellectual Club Name:</label><br>
+            <input type="text" id="intellectual_club_name" name="intellectual_club_name" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    
+    <!-- Button to show the imprint -->
+    <button id="toggle-imprint-btn" class="imprint-btn" onclick="toggleImprint()">Show Imprint</button>
+
+        <!-- Hidden Imprint content section -->
+    <div id="imprint-content" class="imprint-content" style="display: none;">
+        <p>This website is student lab work and does not necessarily reflect Constructor University opinions. Constructor University does 
+            not endorse this site, nor is it checked by Constructor University regularly, nor is it part of the official Constructor University web presence.</p>
+        <p>For each external link existing on this website, we initially have checked that the target page does not contain contents which is illegal wrt. 
+            German jurisdiction. However, as we have no influence on such contents, this may change without our notice. Therefore we deny any responsibility 
+            for the websites referenced through our external links from here. No information conflicting with GDPR is stored in the server.</p>
+    </div>
+
+
+
+    <script>
+        function toggleImprint() {
+            var imprintContent = document.getElementById('imprint-content');
+            var toggleButton = document.getElementById('toggle-imprint-btn');
+            
+            if (imprintContent.style.display === 'none') {
+                imprintContent.style.display = 'block'; // Show imprint
+                toggleButton.textContent = 'Hide Imprint';
+            } else {
+                imprintContent.style.display = 'none'; // Hide imprint
+                toggleButton.textContent = 'Show Imprint';
+            }
+        }
+        </script>
+        
+</body>
+</html>
