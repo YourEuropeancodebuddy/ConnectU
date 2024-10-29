@@ -29,12 +29,6 @@
 
     <div class="slogan-words">
         <form action="activity.php" method="post">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username" required><br><br>
-
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
-
             <label for="activity_name">Activity Name:</label><br>
             <input type="text" id="activity_name" name="activity_name" required><br><br>
 
@@ -60,10 +54,11 @@
         </form>
     </div>
 
+    
     <!-- Button to show the imprint -->
     <button id="toggle-imprint-btn" class="imprint-btn" onclick="toggleImprint()">Show Imprint</button>
 
-    <!-- Hidden Imprint content section -->
+        <!-- Hidden Imprint content section -->
     <div id="imprint-content" class="imprint-content" style="display: none;">
         <p>This website is student lab work and does not necessarily reflect Constructor University opinions. Constructor University does 
             not endorse this site, nor is it checked by Constructor University regularly, nor is it part of the official Constructor University web presence.</p>
@@ -71,6 +66,8 @@
             German jurisdiction. However, as we have no influence on such contents, this may change without our notice. Therefore we deny any responsibility 
             for the websites referenced through our external links from here. No information conflicting with GDPR is stored in the server.</p>
     </div>
+
+
 
     <script>
         function toggleImprint() {
@@ -85,6 +82,7 @@
                 toggleButton.textContent = 'Show Imprint';
             }
         }
-    </script>
+        </script>
+        
 </body>
 </html>

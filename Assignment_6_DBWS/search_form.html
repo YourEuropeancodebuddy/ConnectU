@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Activities</title>
+    <link rel="stylesheet" href="ConnectU.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo"><img src="ConnectU_Logo.png" alt="Logo"></h2>
+        </div>
+
+        <div class="menu-search">
+            <div class="menu">
+                <ul>
+                    <li><a href="ConnectU.html">Home</a></li>
+                    <li><a href="maintenance.html">Maintenance</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slogan">
+        <h1>Search Activities</h1>
+    </div>
+
+    <div class="slogan-words">
+        <form action="search_results.php" method="get">
+            <!-- Query 1: Search by date range -->
+            <div class="search-section">
+                <h3>Search by Date Range</h3>
+                <label for="start_date">Start Date:</label>
+                <input type="date" id="start_date" name="start_date">
+                
+                <label for="end_date">End Date:</label>
+                <input type="date" id="end_date" name="end_date">
+            </div>
+
+            <!-- Query 2: Search by location -->
+            <div class="search-section">
+                <h3>Search by Location</h3>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location">
+            </div>
+
+            <!-- Query 3: Search by activity name -->
+            <div class="search-section">
+                <h3>Search by Activity Name</h3>
+                <label for="activity_name">Activity Name:</label>
+                <input type="text" id="activity_name" name="activity_name">
+            </div>
+
+            <!-- Query 4: Filter by accessibility -->
+            <div class="search-section">
+                <h3>Filter by Accessibility</h3>
+                <label for="open_to_everyone">Open to Everyone:</label>
+                <input type="checkbox" id="open_to_everyone" name="open_to_everyone" value="1">
+            </div>
+
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</body>
+</html>
