@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00203f 60%, rgba(255, 255, 255, 1) 80%, rgba(255, 87, 34, 1) 100%);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #00203f;
+    color: #fff;
+    position: fixed; /* Or relative/absolute depending on your design */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it spans the width of the page */
+    z-index: 1000; /* Make sure it sits above other elements */
+    
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+/* Group menu and search button together */
+.menu-search {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    position: relative; /* Set position for dropdown */
+}
+
+.menu ul li {
+    margin: 0 15px;
+    position: relative; /* Set position for dropdown */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(0, 32, 63);
+    transform: scale(1.05);
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position it below the dropdown item */
+    background-color: rgb(0, 32, 63); /* Match with navbar background */
+    min-width: 160px; /* Set a min width for the dropdown */
+    z-index: 1; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px; /* Add padding */
+    text-decoration: none;
+    display: block; /* Make links block elements */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Search Bar */
+.search-bar {
+    width: 250px; /* Make the search bar larger */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #008CBA;
+    border-radius: 20px;
+    outline: none;
+    transition: width 0.3s ease, opacity 0.3s ease; /* Add transition for smooth visibility */
+}
+
+/* Optional: Increase search bar width when focused */
+.search-bar:focus {
+    width: 300px; /* Expand width when focused */
+    border-color: #005f80; /* Change border color on focus */
+}
+
+/* Search Button */
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: rgb(0, 32, 63);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+} 
+
+.btn i {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.btn:hover i {
+    color: rgb(0, 32, 63);
+}
+
+/* Slogan section */
+.slogan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: left;
+    position: relative;
+    height: 100%;
+}
+
+.slogan img {
+    height: 300px;
+    margin-right: 50px;
+}
+
+.slogan h1 {
+    font-size: 50px;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+}
+
+.slogan-words {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-left: 200px;
+}
+
+.slogan-words p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 190px;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .slogan {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .slogan img {
+        height: 200px;
+        margin: 0 0 20px 0;
+    }
+
+    .slogan h1 {
+        font-size: 40px;
+    }
+}
+
+
+/* Button styling */
+.imprint-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #FF5722; /* Soft orange color */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.imprint-btn:hover {
+    background-color: #b43610; /* Darker orange on hover */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* Imprint content styling */
+.imprint-content {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    line-height: 1.7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.5s ease; /* Smooth open/close transition */
+}
+
+/* Smooth transition for showing content */
+.imprint-content.show {
+    display: block;
+    opacity: 1;
+}
+
+body {
+    padding-top: 100px; /* Push content below the navbar */
+    height: 100%;
+    overflow: auto; /* Allow scrolling */
+}
+
+.form-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #126fcb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* Ensure container expands */
+}
+
+input[type="text"], 
+input[type="date"], 
+input[type="time"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Add spacing */
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #FF5722;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #b43610;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    input[type="submit"] {
+        width: 100%; /* Full width button */
+    }
+}
+
+/* Style for the maintenance page links */
+.maintenance-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.maintenance-links li {
+    margin: 10px 0; /* Add space between links */
+}
+
+.styled-link {
+    display: inline-block;
+    background-color: #FF5722; /* Bright button-like color */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+}
+
+.styled-link:hover {
+    background-color: #b43610; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.styled-link:active {
+    background-color: #8c2c0b; /* Even darker when pressed */
+    transform: scale(1.02); /* Slight shrink on click */
+}
+
