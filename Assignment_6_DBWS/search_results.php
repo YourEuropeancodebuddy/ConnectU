@@ -66,7 +66,7 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title>
-    <link rel="stylesheet" href="ConnectU.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="navbar">
@@ -77,7 +77,7 @@ $result = $stmt->get_result();
         <div class="menu-search">
             <div class="menu">
                 <ul>
-                    <li><a href="ConnectU.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="maintenance.html">Maintenance</a></li>
                 </ul>
             </div>

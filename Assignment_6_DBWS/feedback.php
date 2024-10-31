@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity Submission Feedback</title>
-    <link rel="stylesheet" href="ConnectU.css"> <!-- Link to your CSS for consistent styling -->
+    <link rel="stylesheet" href="index.css"> <!-- Link to your CSS for consistent styling -->
     <style>
         /* Feedback message styles */
         .success-message {

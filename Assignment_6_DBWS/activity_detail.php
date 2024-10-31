@@ -31,7 +31,7 @@ $activity = $result->fetch_assoc();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity Details</title>
-    <link rel="stylesheet" href="ConnectU.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="navbar">
@@ -42,7 +42,7 @@ $activity = $result->fetch_assoc();
         <div class="menu-search">
             <div class="menu">
                 <ul>
-                    <li><a href="ConnectU.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="maintenance.html">Maintenance</a></li>
                 </ul>
             </div>
